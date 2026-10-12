@@ -23,12 +23,12 @@ const heroSlides = [
     position: 'center',
   },
   {
-    image: '/images/igbo-cultural-dance.jpg',
+    image: '/images/nanku dance.jpg',
     alt: 'Traditional Igbo cultural dance',
     position: 'center',
   },
   {
-    image: '/images/nanku-masquerade.jpg',
+    image: '/images/nanku masquarade.jpg',
     alt: 'Traditional masquerade celebrating Igbo heritage',
     position: 'center',
   },
