@@ -1,0 +1,40 @@
+const queens = [
+  {
+    id: 1,
+    name: "Elegant Queen One",
+    town: "Nanku",
+    placeOfOrigin: "Nanku",
+    hairColour: "Black",
+    height: "165 cm",
+    sponsorName: "Sponsor Name",
+    culturalImage: "/images/nanku festival.jpg",
+    corporateImage: "/images/nanku festival.jpg",
+    totalVotes: 0,
+  },
+  {
+    id: 2,
+    name: "Elegant Queen Two",
+    town: "Nanku",
+    placeOfOrigin: "Nanku",
+    hairColour: "Black",
+    height: "168 cm",
+    sponsorName: "Sponsor Name",
+    culturalImage: "/images/nanku festival.jpg",
+    corporateImage: "/images/nanku festival.jpg",
+    totalVotes: 0,
+  },
+  {
+    id: 3,
+    name: "Elegant Queen Three",
+    town: "Nanku",
+    placeOfOrigin: "Nanku",
+    hairColour: "Black",
+    height: "162 cm",
+    sponsorName: "Sponsor Name",
+    culturalImage: "/images/nanku festival.jpg",
+    corporateImage: "/images/nanku festival.jpg",
+    totalVotes: 0,
+  },
+];
+
+export default queens;
