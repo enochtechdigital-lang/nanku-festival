@@ -1,0 +1,212 @@
+.festival-footer {
+width: 100%;
+padding: 64px 0 22px;
+background: #1a0d0d;
+color: #fdf6e8;
+border-top: 1px solid rgba(249, 217, 118, 0.25);
+box-sizing: border-box;
+}
+
+.festival-footer,
+.festival-footer * {
+box-sizing: border-box;
+}
+
+.festival-footer-container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+.festival-footer-main {
+display: grid;
+grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
+gap: 42px;
+padding-bottom: 48px;
+}
+
+.festival-footer-brand {
+max-width: 340px;
+}
+
+.festival-footer-logo {
+display: inline-flex;
+align-items: center;
+gap: 12px;
+color: #f9d976;
+text-decoration: none;
+}
+
+.festival-footer-crown {
+display: grid;
+place-items: center;
+width: 48px;
+height: 48px;
+border: 1px solid rgba(249, 217, 118, 0.5);
+border-radius: 50%;
+}
+
+.festival-footer-brand-text {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.festival-footer-brand-text strong {
+font-family: 'Cinzel', serif;
+font-size: 1.65rem;
+letter-spacing: 3px;
+line-height: 1;
+}
+
+.festival-footer-brand-text small {
+color: #fdf6e8;
+font-size: 0.55rem;
+letter-spacing: 1.5px;
+}
+
+.festival-footer-brand > p {
+margin: 22px 0 16px;
+color: rgba(253, 246, 232, 0.72);
+font-size: 0.88rem;
+line-height: 1.9;
+}
+
+.festival-footer-motto {
+color: #f9d976;
+font-family: 'Cinzel', serif;
+font-size: 0.8rem;
+line-height: 1.7;
+}
+
+.festival-footer-links,
+.festival-footer-contact {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 14px;
+}
+
+.festival-footer-links h3,
+.festival-footer-contact h3 {
+margin: 0 0 8px;
+color: #f9d976;
+font-family: 'Cinzel', serif;
+font-size: 0.95rem;
+font-weight: 600;
+}
+
+.festival-footer-links a,
+.festival-footer-contact a {
+color: rgba(253, 246, 232, 0.75);
+font-size: 0.84rem;
+line-height: 1.7;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.festival-footer-links a:hover,
+.festival-footer-contact a:hover {
+color: #f9d976;
+}
+
+.festival-footer-contact p,
+.festival-footer-contact a {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin: 0;
+}
+
+.festival-footer-contact p {
+color: rgba(253, 246, 232, 0.75);
+font-size: 0.84rem;
+line-height: 1.7;
+}
+
+.festival-footer-contact svg {
+flex-shrink: 0;
+margin-top: 3px;
+color: #f9d976;
+}
+
+.festival-footer-bottom {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+padding-top: 22px;
+border-top: 1px solid rgba(253, 246, 232, 0.14);
+}
+
+.festival-footer-bottom p {
+margin: 0;
+color: rgba(253, 246, 232, 0.6);
+font-size: 0.76rem;
+line-height: 1.8;
+}
+
+.festival-footer-back-top {
+display: inline-flex;
+align-items: center;
+gap: 7px;
+color: #f9d976;
+font-size: 0.8rem;
+text-decoration: none;
+white-space: nowrap;
+}
+
+.festival-footer-back-top:hover {
+color: #fff0b8;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+.festival-footer-main {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 36px;
+}
+
+.festival-footer-brand {
+max-width: 100%;
+}
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+.festival-footer {
+padding-top: 48px;
+}
+
+.festival-footer-container {
+padding: 0 20px;
+}
+
+.festival-footer-main {
+grid-template-columns: minmax(0, 1fr);
+gap: 32px;
+padding-bottom: 32px;
+}
+
+.festival-footer-brand-text strong {
+font-size: 1.45rem;
+}
+
+.festival-footer-bottom {
+align-items: flex-start;
+flex-direction: column;
+gap: 14px;
+}
+
+.festival-footer-bottom p {
+font-size: 0.72rem;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.festival-footer-links a,
+.festival-footer-contact a {
+transition: none;
+}
+}

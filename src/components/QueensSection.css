@@ -1,0 +1,140 @@
+.queens-section {
+  padding: 76px 0;
+  overflow: clip;
+  background: #fdf6e8;
+  color: #1a0d0d;
+}
+
+.queens-section-heading {
+  max-width: 650px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.queens-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #80601e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.queens-section-heading h2 {
+  margin: 0 0 14px;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.7rem, 5vw, 2.8rem);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.queens-section-heading h2 span {
+  color: #7a1828;
+}
+
+.queens-section-heading p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #6c5b50;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.queens-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+}
+
+.queens-section-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.queens-view-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: 1px solid #7a1828;
+  border-radius: 7px;
+  color: #7a1828;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.queens-empty {
+  padding: 40px 16px;
+  text-align: center;
+  border: 1px solid rgba(26, 13, 13, 0.12);
+  border-radius: 12px;
+}
+
+.queens-empty svg {
+  color: #a17a27;
+}
+
+.queens-empty h3 {
+  font-family: 'Cinzel', serif;
+}
+
+.queens-empty p {
+  color: #6c5b50;
+}
+
+@media (min-width: 600px) {
+  .queens-section {
+    padding: 90px 0;
+  }
+
+  .queens-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (min-width: 950px) {
+  .queens-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (hover: hover) {
+  .queens-view-all:hover {
+    background: #7a1828;
+    color: #fdf6e8;
+  }
+}
+
+@media (max-width: 380px) {
+  .queens-section {
+    padding: 56px 0;
+  }
+
+  .queens-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .queens-section-heading p {
+    font-size: 0.88rem;
+  }
+
+  .queens-grid {
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .queens-view-all {
+    transition: none;
+  }
+}

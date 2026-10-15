@@ -1,0 +1,332 @@
+
+/* =========================================
+   NANKU CULTURAL HERITAGE FESTIVAL
+   LEADERBOARD PAGE
+========================================= */
+
+.leaderboard-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: #fdf6e8;
+  color: #1a0d0d;
+  overflow-x: clip;
+}
+
+.leaderboard-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Page heading */
+
+.leaderboard-heading {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.leaderboard-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #a77b20;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.leaderboard-heading h1 {
+  margin: 0;
+  color: #1a0d0d;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.leaderboard-heading h1 span {
+  color: #8d2038;
+}
+
+.leaderboard-heading > p {
+  max-width: 580px;
+  margin: 18px auto 0;
+  color: #71615a;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Main rankings panel */
+
+.leaderboard-panel {
+  padding: 28px;
+  border: 1px solid rgba(167, 123, 32, 0.24);
+  border-radius: 20px;
+  background: #fffdf8;
+  box-shadow: 0 16px 45px rgba(26, 13, 13, 0.07);
+}
+
+.leaderboard-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #eee3d0;
+  color: #a77b20;
+}
+
+.leaderboard-panel-heading h2 {
+  margin: 0;
+  color: #1a0d0d;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.leaderboard-panel-heading p {
+  margin: 6px 0 0;
+  color: #82736b;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Contestant rows */
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 42px 64px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 4px;
+  border-bottom: 1px solid #f0e8dc;
+  transition: background 0.2s ease;
+}
+
+.leaderboard-row:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-row:hover {
+  background: #fcf7ed;
+}
+
+.leaderboard-rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e4d3ac;
+  border-radius: 50%;
+  background: #f8efd9;
+  color: #755116;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.leaderboard-row:first-child .leaderboard-rank {
+  border-color: #d5ad4b;
+  background: #8d2038;
+  color: #fff4d7;
+}
+
+.leaderboard-queen-image {
+  display: block;
+  width: 64px;
+  height: 76px;
+  border: 2px solid #e4d3ac;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #eee3d0;
+}
+
+.leaderboard-queen-info {
+  min-width: 0;
+}
+
+.leaderboard-queen-info h3 {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #271313;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.leaderboard-queen-info p {
+  margin: 5px 0 0;
+  color: #82736b;
+  font-size: 0.85rem;
+}
+
+.leaderboard-votes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.leaderboard-votes strong {
+  color: #8d2038;
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.leaderboard-votes span {
+  color: #82736b;
+  font-size: 0.78rem;
+}
+
+/* Empty state */
+
+.leaderboard-empty {
+  padding: 45px 15px;
+  text-align: center;
+  color: #a77b20;
+}
+
+.leaderboard-empty h3 {
+  margin: 14px 0 8px;
+  color: #1a0d0d;
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.leaderboard-empty p {
+  margin: 0;
+  color: #82736b;
+  line-height: 1.7;
+}
+
+/* Transparency note */
+
+.leaderboard-disclaimer {
+  max-width: 700px;
+  margin: 22px auto 0;
+  color: #82736b;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+  .leaderboard-page {
+    padding: 60px 16px;
+  }
+
+  .leaderboard-heading {
+    margin-bottom: 32px;
+  }
+
+  .leaderboard-panel {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 34px 54px minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 17px 0;
+  }
+
+  .leaderboard-rank {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .leaderboard-queen-image {
+    width: 54px;
+    height: 66px;
+  }
+
+  .leaderboard-queen-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .leaderboard-votes strong {
+    font-size: 1rem;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 420px) {
+  .leaderboard-page {
+    padding: 44px 12px;
+  }
+
+  .leaderboard-eyebrow {
+    gap: 6px;
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+  }
+
+  .leaderboard-heading > p {
+    font-size: 0.9rem;
+  }
+
+  .leaderboard-panel {
+    padding: 18px 12px;
+  }
+
+  .leaderboard-panel-heading {
+    gap: 10px;
+  }
+
+  .leaderboard-panel-heading h2 {
+    font-size: 1.05rem;
+  }
+
+  .leaderboard-panel-heading p {
+    font-size: 0.78rem;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 28px 44px minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .leaderboard-rank {
+    width: 27px;
+    height: 27px;
+    font-size: 0.75rem;
+  }
+
+  .leaderboard-queen-image {
+    width: 44px;
+    height: 56px;
+    border-radius: 8px;
+  }
+
+  .leaderboard-queen-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .leaderboard-queen-info p {
+    font-size: 0.75rem;
+  }
+
+  .leaderboard-votes strong {
+    font-size: 0.9rem;
+  }
+
+  .leaderboard-votes span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaderboard-row {
+    transition: none;
+  }
+}
