@@ -10,13 +10,12 @@ function Home() {
     <main className="home-page">
       <Navbar />
 
-      <Hero />
-
-      <FestivalIntro />
-
-      <QueensSection />
-
-      <Leaderboard />
+      <div className="home-content">
+        <Hero />
+        <FestivalIntro />
+        <QueensSection />
+        <Leaderboard />
+      </div>
 
       <Footer />
     </main>
