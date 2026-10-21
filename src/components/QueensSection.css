@@ -1,9 +1,23 @@
+/* =========================================
+   QUEENS SECTION — BLOCK LAYOUT
+========================================= */
+
 .queens-section {
   padding: 76px 0;
   overflow: clip;
   background: #fdf6e8;
   color: #1a0d0d;
 }
+
+/* Keep section content aligned and readable */
+.queens-section .container {
+  width: min(100% - 36px, 1200px);
+  margin-inline: auto;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
 
 .queens-section-heading {
   max-width: 650px;
@@ -43,11 +57,27 @@
   line-height: 1.8;
 }
 
+/* =========================================
+   CONTESTANT BLOCK GRID
+========================================= */
+
 .queens-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 22px;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
 }
+
+/* Let each card shrink inside its grid column */
+.queens-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
 
 .queens-section-footer {
   display: flex;
@@ -61,21 +91,40 @@
   justify-content: center;
   gap: 10px;
   min-height: 46px;
+  max-width: 100%;
   padding: 12px 20px;
   border: 1px solid #7a1828;
-  border-radius: 7px;
+  border-radius: 9px;
+  background: transparent;
   color: #7a1828;
+  text-align: center;
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
+.queens-view-all:focus-visible {
+  outline: 3px solid #a17a27;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   EMPTY STATE BLOCK
+========================================= */
+
 .queens-empty {
-  padding: 40px 16px;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+  border: 1px solid rgba(122, 24, 40, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.55);
   text-align: center;
-  border: 1px solid rgba(26, 13, 13, 0.12);
-  border-radius: 12px;
 }
 
 .queens-empty svg {
@@ -83,12 +132,22 @@
 }
 
 .queens-empty h3 {
+  margin: 0;
   font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
 .queens-empty p {
+  margin: 0;
   color: #6c5b50;
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (min-width: 600px) {
   .queens-section {
@@ -101,6 +160,10 @@
   }
 }
 
+/* =========================================
+   DESKTOP
+========================================= */
+
 @media (min-width: 950px) {
   .queens-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -108,16 +171,29 @@
   }
 }
 
+/* =========================================
+   INTERACTION
+========================================= */
+
 @media (hover: hover) {
   .queens-view-all:hover {
     background: #7a1828;
     color: #fdf6e8;
+    transform: translateY(-2px);
   }
 }
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media (max-width: 380px) {
   .queens-section {
     padding: 56px 0;
+  }
+
+  .queens-section .container {
+    width: calc(100% - 28px);
   }
 
   .queens-section-heading {
@@ -131,8 +207,14 @@
   .queens-grid {
     gap: 18px;
   }
+
+  .queens-view-all {
+    padding-inline: 14px;
+    font-size: 0.82rem;
+  }
 }
 
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .queens-view-all {
     transition: none;
