@@ -1,0 +1,299 @@
+/* =====================================
+   NANKU FESTIVAL — SHARED BLOCK SYSTEM
+===================================== */
+
+.content-container {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+  min-width: 0;
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+.content-section {
+  padding: 72px 0;
+  overflow: clip;
+  background: #fdf6e8;
+  color: #1a0d0d;
+}
+
+.content-section--dark {
+  background: #1a0d0d;
+  color: #fdf6e8;
+}
+
+.content-section-heading {
+  max-width: 680px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.content-section-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #80601e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.content-section-heading h2 {
+  margin: 0 0 14px;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.7rem, 5vw, 2.8rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.content-section-heading h2 span {
+  color: #7a1828;
+}
+
+.content-section-heading p {
+  max-width: 540px;
+  margin: 0 auto;
+  color: #6c5b50;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.content-section--dark .content-section-eyebrow,
+.content-section--dark .content-section-heading h2 span {
+  color: #f9d976;
+}
+
+.content-section--dark .content-section-heading p {
+  color: rgba(253, 246, 232, 0.72);
+}
+
+/* =====================================
+   RESPONSIVE BLOCK GRID
+===================================== */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+.content-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* =====================================
+   INDIVIDUAL CONTENT BLOCK
+===================================== */
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  overflow: hidden;
+
+  background: #fffdf8;
+  color: #1a0d0d;
+
+  border: 1px solid rgba(201, 154, 62, 0.3);
+  border-radius: 14px;
+
+  box-shadow: 0 5px 18px rgba(26, 13, 13, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.content-block-title {
+  margin: 0 0 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.content-block-description {
+  margin: 0;
+  color: #6c5b50;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* Dark block variant */
+
+.content-block--dark {
+  background: #241414;
+  color: #fdf6e8;
+  border-color: rgba(249, 217, 118, 0.2);
+}
+
+.content-block--dark .content-block-description {
+  color: rgba(253, 246, 232, 0.72);
+}
+
+/* Gold block variant */
+
+.content-block--gold {
+  background: #f9d976;
+  color: #1a0d0d;
+  border-color: #d3a93c;
+}
+
+.content-block--gold .content-block-description {
+  color: #4d3b17;
+}
+
+/* =====================================
+   IMAGES INSIDE BLOCKS
+===================================== */
+
+.content-block-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 18px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9px;
+  background: #392525;
+}
+
+/* =====================================
+   BLOCK BUTTON
+===================================== */
+
+.content-block-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 46px;
+  margin-top: 20px;
+  padding: 12px 16px;
+
+  border: 1px solid #d3a93c;
+  border-radius: 8px;
+
+  background: #f9d976;
+  color: #1a0d0d;
+
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.content-block-button:focus-visible {
+  outline: 3px solid #80601e;
+  outline-offset: 3px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (min-width: 600px) {
+  .content-section {
+    padding: 88px 0;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .content-block {
+    padding: 24px;
+  }
+}
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (min-width: 950px) {
+  .content-grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .content-grid--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 380px) {
+  .content-container {
+    width: calc(100% - 28px);
+  }
+
+  .content-section {
+    padding: 56px 0;
+  }
+
+  .content-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .content-section-heading p {
+    font-size: 0.88rem;
+  }
+
+  .content-grid {
+    gap: 16px;
+  }
+
+  .content-block {
+    padding: 17px;
+    border-radius: 11px;
+  }
+
+  .content-block-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* =====================================
+   HOVER AND ACCESSIBILITY
+===================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .content-block--interactive:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 154, 62, 0.7);
+    box-shadow: 0 12px 28px rgba(26, 13, 13, 0.12);
+  }
+
+  .content-block-button:hover {
+    background: #7a1828;
+    color: #fdf6e8;
+    border-color: #7a1828;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content-block,
+  .content-block-button {
+    transition: none;
+  }
+}
