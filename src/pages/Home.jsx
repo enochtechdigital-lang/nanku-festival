@@ -1,29 +1,24 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FestivalIntro from '../components/FestivalIntro';
-import QueenCard from '../components/QueenCard';
 import QueensSection from '../components/QueensSection';
 import Leaderboard from '../components/Leaderboard';
 import Footer from '../components/Footer';
 
 function Home() {
   return (
-    <main>
-
+    <main className="home-page">
       <Navbar />
 
       <Hero />
 
       <FestivalIntro />
 
-      <QueenCard />
-
       <QueensSection />
 
       <Leaderboard />
-      
-      <Footer />
 
+      <Footer />
     </main>
   );
 }
