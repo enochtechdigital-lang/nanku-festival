@@ -11,17 +11,25 @@ import AdminDashboard from './pages/AdminDashboard';
 function App() {
   return (
     <Routes>
+      {/* Homepage */}
       <Route path="/" element={<Home />} />
-      <Route path="/how-to-vote" element={<HowToVote />} />
+
+      {/* Voting */}
       <Route path="/vote" element={<Vote />} />
-      <Route path="/adminDashboard" element={<AdminDashboard />} />
+      <Route path="/how-to-vote" element={<HowToVote />} />
+
+      {/* Contestants and rankings */}
+      <Route path="/queens" element={<Home />} />
       <Route path="/leaderboard" element={<Leaderboard />} />
-      <Route path="/login" element={<Login />} />
+
+      {/* Authentication */}
       <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+
+      {/* Administration */}
+      <Route path="/adminDashboard" element={<AdminDashboard />} />
     </Routes>
   );
 }
 
 export default App;
-
-
