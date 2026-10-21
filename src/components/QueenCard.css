@@ -1,26 +1,31 @@
-
-/* ==============================
-   ELEGANT QUEEN CARD
-============================== */
+/* =========================================
+   ELEGANT QUEEN — PREMIUM BLOCK CARD
+========================================= */
 
 .queen-card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-width: 0;
+  height: 100%;
   overflow: hidden;
   background: #fdf6e8;
   color: #1a0d0d;
   border: 1px solid rgba(201, 154, 62, 0.4);
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: 0 5px 18px rgba(26, 13, 13, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* QUEEN IMAGE */
+/* =========================================
+   CONTESTANT IMAGE
+========================================= */
 
 .queen-card-image {
   position: relative;
   width: 100%;
   height: 290px;
+  flex-shrink: 0;
   overflow: hidden;
   background: #3d2525;
 }
@@ -34,7 +39,9 @@
   transition: transform 0.5s ease;
 }
 
-/* RANK BADGE */
+/* =========================================
+   RANK BADGE
+========================================= */
 
 .queen-rank {
   position: absolute;
@@ -48,12 +55,14 @@
   padding: 8px 11px;
   color: #1a0d0d;
   background: #f9d976;
-  border-radius: 6px;
+  border-radius: 7px;
   font-size: 0.78rem;
   font-weight: 700;
 }
 
-/* VOTE COUNT */
+/* =========================================
+   VOTE COUNT BLOCK
+========================================= */
 
 .queen-vote-count {
   position: absolute;
@@ -66,9 +75,9 @@
   min-width: 68px;
   padding: 9px 12px;
   color: #fdf6e8;
-  background: rgba(26, 13, 13, 0.9);
+  background: rgba(26, 13, 13, 0.92);
   border: 1px solid rgba(249, 217, 118, 0.7);
-  border-radius: 8px;
+  border-radius: 9px;
 }
 
 .queen-vote-count strong {
@@ -81,7 +90,9 @@
   font-size: 0.7rem;
 }
 
-/* PHOTO SWITCH BUTTON */
+/* =========================================
+   CULTURAL / CORPORATE IMAGE TOGGLE
+========================================= */
 
 .queen-image-toggle {
   position: absolute;
@@ -96,9 +107,9 @@
   min-height: 38px;
   padding: 8px 10px;
   color: #fdf6e8;
-  background: rgba(26, 13, 13, 0.88);
+  background: rgba(26, 13, 13, 0.9);
   border: 1px solid rgba(249, 217, 118, 0.7);
-  border-radius: 6px;
+  border-radius: 7px;
   font: inherit;
   font-size: 0.72rem;
   font-weight: 600;
@@ -111,9 +122,14 @@
   outline-offset: 3px;
 }
 
-/* CARD CONTENT */
+/* =========================================
+   CARD CONTENT BLOCK
+========================================= */
 
 .queen-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 20px 16px 17px;
 }
 
@@ -135,7 +151,9 @@
   overflow-wrap: anywhere;
 }
 
-/* LOCATION */
+/* =========================================
+   LOCATION BLOCK
+========================================= */
 
 .queen-card-location {
   display: flex;
@@ -152,15 +170,20 @@
   color: #8a6229;
 }
 
-/* DIVIDER */
+/* =========================================
+   DETAILS DIVIDER
+========================================= */
 
 .queen-card-divider {
   height: 1px;
+  flex-shrink: 0;
   margin: 16px 0;
   background: rgba(26, 13, 13, 0.12);
 }
 
-/* DETAILS */
+/* =========================================
+   CONTESTANT INFORMATION BLOCKS
+========================================= */
 
 .queen-card-details {
   display: grid;
@@ -174,11 +197,16 @@
   flex-direction: column;
   gap: 5px;
   min-width: 0;
+  padding: 10px;
+  border: 1px solid rgba(26, 13, 13, 0.07);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
 }
 
 .queen-card-details span {
   color: #725f53;
   font-size: 0.72rem;
+  line-height: 1.4;
 }
 
 .queen-card-details strong {
@@ -188,7 +216,9 @@
   overflow-wrap: anywhere;
 }
 
-/* VOTING BUTTON */
+/* =========================================
+   VOTE BUTTON
+========================================= */
 
 .queen-vote-button {
   display: flex;
@@ -196,16 +226,18 @@
   justify-content: center;
   width: 100%;
   min-height: 48px;
+  margin-top: auto;
   padding: 12px;
   color: #1a0d0d;
   background: #f9d976;
   border: 1px solid #d3a93c;
-  border-radius: 7px;
+  border-radius: 8px;
   font: inherit;
   font-size: 0.85rem;
   font-weight: 700;
   text-align: center;
   overflow-wrap: anywhere;
+  cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
 }
 
@@ -214,7 +246,9 @@
   opacity: 0.7;
 }
 
-/* DESKTOP HOVER */
+/* =========================================
+   DESKTOP INTERACTION
+========================================= */
 
 @media (hover: hover) and (pointer: fine) {
   .queen-card:hover {
@@ -236,7 +270,9 @@
   }
 }
 
-/* TABLET AND MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 600px) {
   .queen-card-image {
@@ -252,7 +288,15 @@
   }
 }
 
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
 @media (max-width: 380px) {
+  .queen-card {
+    border-radius: 12px;
+  }
+
   .queen-card-image {
     height: 230px;
   }
@@ -267,7 +311,11 @@
   }
 
   .queen-card-details {
-    gap: 12px 8px;
+    gap: 10px 8px;
+  }
+
+  .queen-card-details > div {
+    padding: 8px;
   }
 
   .queen-image-toggle {
@@ -286,12 +334,15 @@
   }
 }
 
-/* REDUCED MOTION */
+/* =========================================
+   REDUCED MOTION
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .queen-card,
   .queen-card-image > img,
-  .queen-vote-button {
+  .queen-vote-button,
+  .queen-image-toggle {
     transition: none;
   }
 }
